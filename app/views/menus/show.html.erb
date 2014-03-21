@@ -1,0 +1,11 @@
+<%= @menu.name %>
+<br />
+<% @ingredients.each do |x| %>
+  <%= x.name %>
+<% end %>
+<br />
+<%= form_for([@menu, @ingredient], url: menu_ingredients_path(@menu.id)) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br />
+  <%= submit_tag("submit") %>
+<% end %>

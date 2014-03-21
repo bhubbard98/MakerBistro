@@ -1,5 +1,5 @@
 <% @menus.each do |menu| %>
-  Name: <%= menu.name %>,
+  Name: <%= link_to menu.name, menu_url(menu.id) %>,
   Price: <%= menu.price %>,
   Ingredients: <% menu.ingredients.each do |i| %>
     <%= i.name %>
